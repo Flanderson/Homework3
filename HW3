@@ -1,0 +1,42 @@
+// Allows to use math shourtcuts
+#define _USE_MATH_DEFINES
+#include <cmath>
+//#include <math.h>
+//#define M_PI 3.14159265
+#include <iostream>
+using namespace std;
+
+// This is our main statement
+int main()
+{
+	// varible declartions
+	double h;
+	double v;
+	double t;
+	double g = 9.80;
+	double x;
+
+	// input from user
+	cout << "Enter Initial Height: ";
+	cin >> h;
+	
+	cout << "Enter Initial Velocity: ";
+	cin >> v;
+	
+	cout << "Enter Elapsed Time: ";
+	cin >> t;
+
+	// preform calculations
+	double heightAtTime = h + v * t - 1.0/2.0 * g * pow(t, 2.0);
+	
+	double groundTime = (2.0 * v) / g;
+
+	//double rangeCannon = (2.0 * pow(v, 2.0) * sin(x * M_PI) * cos(x * M_PI)) / g; 
+	 
+	// Display answers
+	cout << "The height at time " << t << " is " << heightAtTime << " meters.\n";
+	cout << "At time " << groundTime << " seconds, the cannonball hits the ground.\n";
+	cout << "The following table shows the range of the cannon for a ranges 25 to 60 in 5 degree increments.\n";
+	cout << "     Angle          Range \n";
+	//cout << right << fixed << setw(8) << "" << "" << setw(8);
+}
